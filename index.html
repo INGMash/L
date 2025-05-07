@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Counting down for Habeby</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container" onclick="startAudio()">
+    <h1 class="title">Counting down for Habeby 💖</h1>
+    <div class="image-box">
+      <img src="Background.jpg" alt="Background" class="center-image"/>
+    </div>
+    <div class="countdown" id="countdown"></div>
+    <p class="hint">Click anywhere to start the music 🎵</p>
+    <audio id="audio" loop>
+      <source src="Song.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <script src="countdown.js"></script>
+  <script>
+    function startAudio() {
+      const audio = document.getElementById('audio');
+      audio.play();
+      document.querySelector('.hint').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
